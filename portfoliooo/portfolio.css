@@ -1,0 +1,803 @@
+body {
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', serif;
+    font-size: 30px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #E5D3B3;
+}
+
+/* navigationsmenu container */
+.header {
+    display: flex; /* placerer elementerne horisontalt */
+    justify-content: space-between; /* logoet til venstre og menuen til højre */
+    align-items: center; /*placerer elementerne vertikalt i navigationsbaren*/
+    overflow: hidden; /*indhold der går udover navigationsbaren bliver fjernet*/
+    background-color: #B99976;
+    padding: 20px 10px; /*indre afstand (20px=top/bund, 10px=siderne)*/
+    flex-wrap: wrap; /*elementerne må komme ned på næste linje på små skærme*/
+  }
+
+/* logoets styling */
+.header__logo img {
+    max-height: 75px; 
+}
+
+/* container til navigationslink*/
+.header__nav {
+    display: flex; /*links placeret horisontalt*/
+    gap: 15px; /* afstanden mellem links (om mig, projekter og kontakt mig)*/
+}
+
+/* navigationslinks */
+.header__nav a {
+    color: #664229;
+    text-align: center; /*tekst centreret i hver navigationslink*/
+    padding: 12px; /*afstand i linkene*/
+    text-decoration: none; /*underlinje fjernet*/
+    font-size: 22px; 
+    border-radius: 10px; /*runde i hjørnerne*/
+}
+
+/* hoover-effekt for navigationslinks */
+.header__nav a:hover {
+    background-color: #664229;
+    color: #E5D3B3;
+}
+
+/* responsiv design for skærme, der er 768px brede eller mindre */
+@media screen and (max-width: 500px) {    
+    .header__nav a {
+        display: block; /*som blokke, og fylder hele linjen*/
+        text-align: left;
+    }
+    
+    .header__nav {
+        float: none; /* menuen tilpasser sig små skærme */
+    }
+  }
+
+/*hele forsiden*/
+.front-page {
+    display: flex; /* mulighed for at justere billede (venstre) og tekst (højre) side om side */
+    justify-content: space-between; /*lige meget mellemrum mellem billede og tekstcontainer*/
+    align-items: center; /*placeret i midten af forsidens højde*/
+    padding: 50px; /*luft om forsiden*/
+    position: relative; /* muligihed fr at bruge absolutte positioner i frontpage containeren*/
+}
+
+/*container til billedet, som sikre at billedet placeres korrekt*/
+.front-page__image-container {
+    position: relative; /*mulighed fir at placere absolut i containeren*/
+    width: 100%;
+}
+
+/*rektanglerne under billedet*/
+.front-page__rectangle,
+.front-page__background-rectangle {
+    position: absolute; /* nemt at placere rektanglerne ift. containeren */
+    z-index: 1; /*bag billedet på forsiden*/
+    background-color: #D2B48C;
+    border-radius: 10px;
+}
+
+.front-page__rectangle {
+    width: 400px; 
+    height: 350px;
+    background-color: #987554;
+    top: 20px;
+    left: 60px;
+    
+}
+
+.front-page__background-rectangle {
+    width: 420px;
+    height: 380px;
+    background-color: #664229;
+    top: -10px;
+    left: -50px;
+    z-index: -1; /*bag alt andet*/
+}
+
+/*billedet på forsiden*/
+.front-page__featured-image {
+    width: 370px;
+    height: 360px;
+    border-radius: 10px;
+    top: 30px;
+    left: 10px;
+    z-index: 2; /*billedet foran rektanglerne*/
+    position: relative; 
+}
+
+/*container med tekst og knap*/
+.front-page__text-container {
+    width: 90%; 
+    max-width: 700px; 
+    margin: 10px auto; /* centreret horisontalt */
+    text-align: center; /* tekst og knappen centreret */
+    padding: 35px; /* luft omkring teksten */
+}
+
+/*Mit navn på forsiden*/
+.front-page__name {
+    font-size: 40px;
+    font-weight: normal;
+    color: #664229;
+    margin-bottom: 20px; /*luft under teksten*/
+    text-align: center; /*tekst centreret*/
+}
+
+/*linje mellem navn og tekst*/
+.front-page__divider {
+    border: none; /*kantlinje fjernet*/
+    border-top: 1px solid #664229; /*linje over teksten*/
+    margin: 10px auto; /*linje centreret og luft over og under*/
+    width: 100%;
+}
+
+/* beskrivelse på forsiden */
+.front-page__text {
+    font-size: 18px;
+    line-height: 1.6; /*luft mellem tekstlinje*/
+    margin-bottom: 30px; /*luft under tekst*/
+    color: #664229;
+    text-align: center; /*tekst centreret*/
+}
+
+/*Kontakt mig knappen på forsiden*/
+.front-page__btn {
+    background-color: #664229;
+    color: #E5D3B3;
+    padding: 15px 30px; /*luft i knappen*/
+    font-size: 16px;
+    border: none; /*kant fjernet*/
+    border-radius: 5px;     
+    text-decoration: none; /* ingen linje under teksten i knappen */
+
+}
+
+.front-page__btn:hover {
+    background-color: #A98765;
+    color: #664229;
+}
+
+/* responsiv design for skærme, der er 768px brede eller mindre */
+@media screen and (max-width: 768px) {
+    .front-page {
+        flex-direction: column; /* billedet og teksten placeret vertikalt */
+        align-items: center; /*indhold centreret*/
+        padding: 20px; 
+    }
+
+    .front-page__image-container {
+        margin-bottom: 20px; /* luft mellem billedet og teksten */
+    }
+
+   .front-page__rectangle,
+   .front-page__background-rectangle {
+        display: none; /* baggrundsrektanglerne skjult*/
+    }
+
+    .front-page__featured-image {
+        width: 90%; 
+        height: auto; /* proportionerne er det samme*/
+    }
+
+    .front-page__text-container {
+        padding: 20px; 
+        text-align: center; /*tekst centreret*/
+    }
+
+    .front-page__name {
+        font-size: 30px; 
+    }
+
+    .front-page__text {
+        font-size: 16px;
+        line-height: 1.4; /* luft mellem tekstlinje */
+    }
+
+    .front-page__btn {
+        padding: 15px 25px;
+        font-size: 14px; 
+    }
+}
+
+/* Rektanglen i bunden */
+.end__rectangle {
+    width: 100%; 
+    height: 90px;
+    background-color: #B99976;
+    position: relative; 
+    margin-top: 30px; /* luft mellem rektanglen og elementen ovenfor*/
+    z-index: 1; /* hvis andre elementer overlapper, vil den her rektangle stå ovenpå de andre elementer*/
+}
+
+/* container til rektangle efter endrectangle*/
+.about__additional-container {
+    display: flex; /*indhold horisontalt*/
+    justify-content: center; /* centrerer rektanglen vandret */
+    margin-top: 20px; /* luft mellem denne og endrectangle */
+}
+
+/* rektangle */
+.about__additional-rectangle {
+    width: 80%; 
+    height: 60px; 
+    background-color: #987554; 
+}
+
+/* container til ekstra rektangle */
+.about__additional-container--below {
+    display: flex;
+    justify-content: center; 
+    margin-top: 10px; /* luft mellem denne og forrige rektangle */
+}
+/*  ekstra rektangle */
+.about__additional-rectangle--below {
+    width: 80%; 
+    height: 30px; 
+    background-color: #987554; 
+}
+
+/* om mig delen */
+.about {
+    text-align: center; /* alt indhold centreret */
+    background-color: #E5D3B3; 
+}
+
+/* overskrift i om mig delen*/
+.about__text h3 {
+    font-size: 40px; 
+    font-weight: normal;
+    color: #664229; 
+    margin-bottom: 10px; /* luften under overskriften */
+}
+
+/*linje under overskriften*/
+.about__text .about__divider {
+    width: 50%; 
+    border: none;
+    border-top: 1px solid #664229; 
+    margin: 10px auto; /* linjen centreret */
+}
+
+/*brødteksten i om mig delen*/
+.about__text p {
+    font-size: 18px; 
+    line-height: 1.6; /* linjeafstand */
+    max-width: 850px; 
+    margin: 20px auto; /* teksten centreret*/
+    color: #664229; 
+}
+
+/* cirklerne under Om Mig delen */
+.about__circle-container {
+    display: flex; /* cirklerne side om side horisontalt */
+    justify-content: center; /* cirklerne centreret */
+    gap: 20px; /* afstanden mellem cirklerne */
+    margin-top: 20px; /* Luft mellem cirklerne og indholdet ovenfor*/
+}
+
+/*design for hver cirkel*/
+.about__circle {
+    width: 280px; 
+    height: 280px; 
+    border-radius: 50%; /* bliver rund */
+    overflow: hidden; /* billedet bliver inde i cirklen */
+    display: flex;
+    align-items: center; /* billede centreret vertikalt */
+    justify-content: center; /* billede centreret horisontalt */
+}
+
+.about__circle img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* billedets proportioner bliver bevaret*/
+}
+
+/* responsiv design for skærme, der er 768px brede eller mindre */
+@media screen and (max-width: 768px) {
+    .end__rectangle {
+        width: 100%; 
+        height: 70px; 
+    }
+
+    .about__additional-container {
+        display: flex;
+        justify-content: center; /* rektanglen vandret */
+        margin-top: 20px; /* luft mellem denne rektangle og elementet ovenfor */
+    }
+
+    .about__additional-rectangle {
+        width: 80%; 
+        height: 60px; 
+        background-color: #987554; 
+    }
+
+    .about__additional-container--below {
+        display: flex;
+        justify-content: center; 
+        margin-top: 10px; 
+    }
+
+    .about__additional-rectangle--below {
+        width: 80%; 
+        height: 30px; 
+        background-color: #987554; 
+    }
+
+    .about__circle-container {
+        display: flex; /* cirklerne side om side */
+        justify-content: center; /* centrering af cirklerne */
+        gap: 20px; /* afstanden mellem cirklerne */
+        margin-top: 20px;
+    }
+
+    .about__circle {
+        width: 120px; 
+        height: 120px;
+
+    }
+
+    .about__circle img {
+        width: 100%; 
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .about__text p {
+        font-size: 16px; 
+        line-height: 1.4; 
+        max-width: 80%; 
+    }
+
+    .about__text h3 {
+        font-size: 30px; 
+    }
+
+    .about__text .about__divider {
+        width: 80%; 
+        border: none;
+        border-top: 1px solid #664229; 
+        margin: 10px auto; /* centrering af linjen */
+    }
+}
+
+/* projekter delen */
+.projects {
+    text-align: center; /* overskrift og billeder bliver centreret*/
+    padding: 50px 20px; /*afstand rundt om projektdelen*/
+    background-color: #E5D3B3;
+}
+
+/* overskrift */
+.projects__header .projects__title {
+    font-size: 40px;
+    color: #664229;
+    margin-bottom: 10px; /*luft under overskriften*/
+    font-weight: normal;
+}
+
+/*linje*/
+.projects__header .projects__divider {
+    width: 50%;
+    border: none;
+    border-top: 1px solid #664229;
+    margin: 30px auto; /*linje centreret horisontalt*/ 
+}
+
+/* gitter Layout til projekterne */
+.projects__grid {
+    display: grid; /*CSS grid anvendt*/
+    grid-template-columns: repeat(3, 1fr); /* 3 kolonner */
+    gap: 20px; /* afstand mellem kvadraterne */
+    justify-items: center; /* gitteret centrerethorisontalt */
+    margin: 0 auto; 
+    max-width: 1000px;
+
+}
+
+/* design til hvert projekts billede */
+.projects__item {
+    width: 300px; 
+    height: 300px; 
+    overflow: hidden; /* alt det der går udenfor container bliver skjult */
+    border-radius: 10px; 
+    background-color: #987554;
+    position: relative;
+    transition: transform 0.3s ease; /*  hover effekt */
+}
+
+.projects__item:hover {
+    transform: scale(1.05); /*  kvadratet større ved hover */
+}
+
+.projects__item .projects__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* billederne bevarer dens proportioner*/
+}
+
+/* teksten der vises ved hover */
+.projects__item .projects__text {
+    position: absolute;
+    top: 10px; 
+    left: 10px; 
+    width: 90%;
+    height: 90%;
+    color: #E5D3B3; /*tekstfarve*/
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 0; /* tekst skjules når der ikke er hover */
+    text-align: center;
+    padding: 3px; /*luft omkring teksten*/
+    border-radius: 5px; /*hjørner på tekstboks*/
+    display: flex; /* flexbox til centrering af tekst */
+    justify-content: center; /* centrering af tekst horisontalt */
+    align-items: center; /* centrering af tekst vertikalt */
+    transition: opacity 0.3s ease; /* overgangseffekt ved hoover*/
+}
+
+/* tekst vises når musen er over projekt-item */
+.projects__item:hover .projects__text {
+    opacity: 1; /* teksten blir synlig */
+    background-color: rgba(102, 66, 41, 0.9); /* baggrundsfarve med gennemsigtighed */
+}
+
+/* responsiv design for skærme, der er 768px brede eller mindre */
+@media (max-width: 768px) {
+    .projects {
+        padding: 30px 10px; 
+    }
+
+    .projects__header {
+        font-size: 30px; 
+    }
+
+    .projects__title {
+        font-size: 16px; 
+    }
+
+    .projects__header .projects__divider {
+        width: 80%; 
+    }
+
+    .projects__grid {
+        grid-template-columns: repeat(3, 1fr); /* stadig 3 kolonner */
+        gap: 10px; 
+        margin: 0 auto;
+        max-width: 500px;
+    }
+
+    .projects__item {
+        width: 150px; 
+        height: 150px; 
+        overflow: hidden;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .projects__item .projects__image {
+        width: 100%; 
+        height: 100%; 
+    }
+
+    .projects__item .projects__text {
+        font-size: 7px; 
+        padding: 1px; /* luft omkring teksten */
+        width: 85%; 
+        overflow: hidden; /* alt indhold uden for boksen skjules */
+        text-align: center; /* centrering af tekst horisontalt */
+        white-space: normal; /* linjeskift tilladt */
+    }
+}
+
+/* kontakt mig delen */
+.contact {
+    padding: 50px 20px; /*afstand omkring denne del*/
+    text-align: center; /*alt indhold centreret i denne del*/
+}
+
+/* overskrift */
+.contact__header .contact__title {
+    font-size: 36px;
+    color: #664229;
+    margin-bottom: 10px; /*luft under overskrift*/
+    font-weight: normal;
+}
+
+/*linje*/
+.contact__header .contact__divider {
+    width: 50%;
+    border: none;
+    border-top: 1px solid #664229;
+    margin: 20px auto;
+}
+
+/* beskrivelse af kontakt */
+.contact__description {
+    font-size: 18px;
+    color: #664229;
+    margin-bottom: 30px; /*luft under beskrivelsen*/
+}
+
+/* metode til kontakt */
+.contact__methods {
+    display: flex; /*flexbox for at arrangere dem horisontalt*/
+    justify-content: center; /* cirklerne  centreret horisontalt*/
+    gap: 40px;
+}
+
+/* hver kontaktmetode (telefon og e-mail) */
+.contact__method {
+    display: flex; /*flexbox for at arrangere dem horisontalt*/
+    flex-direction: column; /*teksten veritkalt*/
+    align-items: center; /*indholdet centreret horisontalt i hver metode*/
+}
+
+/* cirklerne til ikonerne */
+.contact__icon-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #987554;
+    display: flex; /*flexbox til at centrere ikonet i cirklen*/
+    align-items: center; /*ikoner vertikalt*/
+    justify-content: center; /*ikoner horisontalt*/
+    color: #E5D3B3;
+    margin-bottom: 10px; /*afstand under cirklen*/
+    transition: background-color 0.3s; /*hover*/
+}
+
+.contact__icon-circle span.material-icons {
+    font-size: 100px; /* ikonets størrelse i cirklen */
+}
+
+/* kontakt information */
+.contact__info p {
+    margin: 5px 0; /*luft mellem hver kontakt information*/
+    color: #664229;
+    font-size: 14px;
+}
+
+/* responsiv design for skærme, der er 768px brede eller mindre */
+@media (max-width: 768px) {
+    .contact {
+        padding: 30px;
+    }
+
+    .contact__methods {
+        display: block;  /* på en ny linje vertikalt */
+        text-align: center;  /* centrerer dem */
+    }
+
+    .contact__icon-circle {
+        width: 200px;
+        height: 200px;
+        font-size: 5px;  
+        margin: 10px auto;  /* cirklerne centreret */
+    }
+
+    .contact__description {
+        font-size: 16px; 
+    }
+}
+
+/* container for kontaktformular og billede */
+.contact__container {
+    display: flex; /*flexbox til at arrangere dem horisontalt*/
+    justify-content: space-between; /*pladsen mellem formular og billedet*/
+    align-items: flex-start; /*justerer elementerne til toppen af siden*/
+    width: 100%;
+    margin-top: 50px;
+    flex-wrap: nowrap; /*forhindrer at der sker en linjeskift*/
+    margin-bottom: 10px;
+}
+
+/* halv rektangel til venstre */
+.contact__left-rectangle {
+    width: 15%;
+    height: 550px;
+    background-color: #664229;
+    border-radius: 0 50px 50px 0;
+}
+
+/* kontaktformular-container */
+.contact__form-container {
+    display: flex; /*til at arrangere formularen og billedet*/
+    justify-content: space-between; /*lige meget afstand mellem de to elementer*/
+    width: 100%;
+    max-width: 1800px;
+    position: relative;
+}
+
+/* kontaktformular */
+.contact__form {
+    width: 40%;
+    padding: 20px; /*afstanden indvendig i formularen*/
+    background-color: #E5D3B3;
+    border-radius: 10px;
+}
+
+.contact__form-title {
+    text-align: center; /*overskrift centreret*/
+    color: #664229;
+    font-size: 20px;
+    margin-bottom: 20px; /*afstanden under overskriften*/
+}
+
+.contact__form label {
+    display: block; /*hver label vvil tage op hele bredden af sin container, som nromalt er formularens bredde*/
+    margin-bottom: 10px; /*afstand under hver label*/
+    color: #664229;
+    font-size: 17px;
+}
+
+.contact__form input, .contact__form textarea {
+    width: 100%;
+    padding: 15px; /*indvendig afstand*/
+    margin-bottom: 15px; /*afstand mellem felterne*/
+    font-size: 15px;
+    border: 1px solid #664229;
+    border-radius: 5px;
+}
+
+/*formular knap*/
+.contact__form input[type="submit"] {
+    background-color: #664229;
+    color: #E5D3B3;
+    border: none;
+    width: 150px;
+    display: block;
+    margin: 20px auto; /*centrerer knappen horisontalt*/
+}
+
+.contact__form input[type="submit"]:hover {
+    background-color: #987554;
+}
+
+/* billede til højre */
+.container__image-container {
+    width: 35%;
+    overflow: hidden; /*skjuler overskydende billede*/
+    background-color: #664229;
+    display: flex; /*flexbox til at centrerer billedet*/
+    justify-content: center; /*centrerer billedet horisontalt*/
+    align-items: center; /*centrerer billedet veritkalt*/
+}
+
+.contact__image {
+    width: 100%; /*billede bredt som containeren*/
+    height: 550px;
+    object-fit: cover; /*billede skalerer så det fylder containeren, uden proportioner ændres*/
+    border-radius: 50px;
+}
+
+/* halv rektangel til højre */
+.contact__right-rectangle {
+    width: 20%;
+    height: 550px;
+    background-color: #664229;
+    border-radius: 50px 0 0 50px;
+    position: relative;
+}
+
+/* responsiv design for skærme, der er 768px brede eller mindre */
+@media (max-width: 768px) {
+    .contact__right-rectangle {
+        display: none; /* skjuler højre rektangle på mobil */
+    }
+
+    .contact__left-rectangle{
+      display: none; /* skjuler venstre rektangle på mobil */
+    }
+
+    /* ændring af layoutet for kontaktformular og billede */
+    .contact__container {
+        display: flex;
+        justify-content: space-between; /*pladsen fordelt mellem formular og billede*/
+        align-items: center; /* elementern centreret */
+    }
+
+    .contact__form {
+        width: 30%; 
+    }
+
+    .contact__image-container {
+        width: 50%; 
+    }
+}
+
+/*footer delen*/
+footer {
+    background-color: #D2B48C;
+    text-align: center; /*alt indhold centreret horisontalt*/
+    padding: 10px 0; /*luft på top og bund af footeren*/
+    position: relative;
+    width: 100%;
+    bottom: 0; /*placeret nederst*/
+}
+
+/*tekst i footeren*/
+.footer__content-text {
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', serif;
+    font-size: 25px;
+    color: #664229;
+    margin-bottom: 5px; /*luften under teksten*/
+}
+
+/*linje mellem tekst og ikonerne*/
+.footer__content-line {
+    border: none;
+    border-top: 2px solid #664229;
+    width: 30%;
+    margin: 5px auto; /*linje centreret og luft omkring den*/
+}
+
+/*container for sociale medier ikoner*/
+.footer__content-social-icons { 
+    text-align: center; /*indhold centreret i containeren*/
+    display: flex;
+    justify-content: center; /*ikoner centreret ift. containeren*/
+}
+
+/*hvert sociale medie ikon*/
+.footer__content-social-icon {
+    display: inline-block; /* vises på samme linje, uden at starte en ny linje */
+    margin: 0 10px; /* afstand mellem ikonerne */
+
+}
+
+/*billeder af de sociale ikoner*/
+.footer__content-social-icon-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%; 
+    transition: transform 0.3s ease; /* hover */
+}
+
+/* hover-effekt på de sociale medier ikoner */
+.footer__content-social-icon-img:hover {
+    transform: scale(1.1); /* ikon blir større ved hover */
+}
+
+/* Copyright delen */
+.footer__copyright {
+    background-color: #987554;
+    color: white;
+    font-size: 15px;
+    text-align: center; /*tekst centreret*/
+    margin-top: 20px; /*luften over copyright delen*/
+    padding: 10px 10px; /*luften omkring teksten i copyright delen*/
+}
+
+/* responsiv design for skærme, der er 768px brede eller mindre */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+
+    .footer__content-text {
+        font-size: 20px;
+    }
+
+    .footer__content-line {
+        width: 90%;
+    }
+
+    .footer__content-social-icons {
+        gap: 10px;
+    }
+
+    .footer__content-social-icon-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .footer__copyright {
+        font-size: 12px;
+        padding: 5px 0;
+    }
+}

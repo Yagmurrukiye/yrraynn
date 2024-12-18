@@ -1,0 +1,247 @@
+<!DOCTYPE html> 
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>yrrayn</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <!--logo-->
+        <div class="header__logo">
+            <img src="logo/MitLogo.png" alt="yrraynlogo">
+        </div>
+        <!--navigationsmenu-->
+        <nav class="header__nav">
+            <!--links til forskellige sektioner på siden -->
+            <a href="#about" class="header__link">Om mig</a>
+            <a href="#projects" class="header__link">Projekter</a>
+            <a href="#contacts" class="header__link">Kontakt mig</a>
+        </nav>
+    </header>
+
+    <main> 
+        <!--forsiden-->
+        <div class="front-page">
+            <!--de 3 rektangler på venstre side af forsiden-->
+            <div class="front-page__image-container">
+                <div class="front-page__rectangle"></div>
+                <div class="front-page__background-rectangle"></div>
+                <!--billedet på forsiden-->
+                <img src="billeder/yme.png" alt="Billede af Yagmur Rukiye Tulumcu" class="front-page__featured-image">
+            </div>
+
+            <!--tekst og overskrift på højre side af forsiden-->
+            <div class="front-page__text-container">
+                <div class="front-page__name">Yagmur Rukiye Tulumcu</div>
+                <hr class="front-page__divider">
+                <p class="front-page__text">
+                    Jeg er en multimediedesigner, som har en dyb interesse for enkelhed og effektiv designæstetik.
+                    I det arbejde jeg laver, fokuserer jeg på at skabe et responsivt design, minimalistisk æstetik og farvepsykologi. 
+                    Jeg trives med at skabe basale, men indbydende løsninger, der fokuserer på klarhed og brugervenlighed.
+                </p>
+                <!--kontakt mig knappen-->
+                <a href="#kontakt-formular" class="front-page__btn">Kontakt mig</a>
+            </div>
+        </div>
+
+        <!--om mig delen-->
+        <section class="about">
+            <!--rektangler som kreative elementer-->
+            <div class="end__rectangle"></div> <!--rektangle til at opdele hver del fra hinanden-->
+            <div class="about__additional-container">
+                <div class="about__additional-rectangle"></div>
+            </div>
+            <div class="about__additional-container--below">
+                <div class="about__additional-rectangle--below"></div>
+            </div>
+
+            <!--om mig tekst-->
+            <div id="about" class="about__text">
+                <h3 class="about__title">Om Mig</h3>
+                <hr class="about__divider">
+                <p class="about__description">
+                    Mit navn er Yagmur Rukiye Tulumcu, og jeg er 23 år gammel. Jeg er multimediedesignstuderende i Odense, men bor i Slagelse. Jeg elsker at fremvise mine kreative kompetencer i det arbejde, jeg færdiggør. Jeg bruger fritiden på at udøve mine kreative kompetencer, og på den måde udvikler jeg min kreative evne. Igennem min uddannelse har jeg fået en masse viden om, hvordan man bruger de forskellige Adobe-programmer og laver et færdigt kreativt produkt. Mit fokus ligger altid på at skabe designs, der ikke blot er visuelt tiltalende, men også smukke i deres essens. Jeg elsker at bringe æstetik i mine kreative arbejde.
+                </p>
+            </div>
+        
+            <!--cirkler med billeder-->
+            <div class="about__circle-container">
+                <!--hver cirkel har hver sit billede-->
+                <div class="about__circle">
+                    <img src="billeder/om-mig/ig.png" alt="billede-af-mig">
+                </div>
+                <div class="about__circle">
+                    <img src="billeder/om-mig/medialab.png" alt="hvor-jeg-fotograferer">
+                </div>
+                <div class="about__circle">
+                    <img src="billeder/om-mig/photoshoot.png" alt="professionel-foto">
+                </div>
+                  <div class="about__circle">
+                    <img src="billeder/om-mig/selfie.png" alt="selfie-af-mig">
+                </div>
+            </div>
+        </section>
+
+        <div class="end__rectangle"></div>
+
+        <!--projekter delen-->
+        <section id="projects" class="projects">
+            <div class="projects__header">
+                <h3 class="projects__title">Projekter</h3>
+                <hr class="projects__divider">
+            </div>
+            
+            <!--gitterlayout med billede og tekst-->
+            <div class="projects__grid">
+                <!--hver grid af en billede og en projektbeskrivelse i-->
+                <div class="projects__item">
+                    <img src="projekter/app.PNG" alt="Projekt 1" class="projects__image">
+                    <div class="projects__text">Jeg har kompetence inden for app-design, hvor jeg kombinerer æstetik og funktionalitet. I designet af en dating-app for hunde skabte jeg et intuitivt, visuelt tiltalende layout baseret på research af hundeejernes behov. Jeg anvendte minimalistisk æstetik for at sikre en brugervenlig og engagerende oplevelse.</div>
+                </div>
+                <div class="projects__item">
+                    <img src="projekter/farvefremhaevning.JPG" alt="Projekt 2" class="projects__image">
+                    <div class="projects__text">Min styrke ligger i fotoredigering, hvor jeg fokuserer på at fremhæve de ønskede farver for at skabe et stærkt visuelt fokus. Ved at arbejde med farvejusteringer og kontraster sikrer jeg, at billedets æstetik og budskab bliver tydeligt og efterlader et varigt indtryk hos modtageren.</div>
+                </div>
+                <div class="projects__item">
+                    <img src="projekter/folder.png" alt="Projekt 3" class="projects__image">
+                    <div class="projects__text">Jeg har arbejdet med at designe foldere, der kan tilpasses virksomheders behov og brandidentitet. Ved at kombinere layout, farver og typografi stræber jeg efter at skabe foldere, der præsenterer information på en klar og æstetisk måde.</div>
+                </div>
+                <div class="projects__item">
+                    <img src="projekter/hjemmeside.PNG" alt="Projekt 4" class="projects__image">            
+                    <div class="projects__text">Jeg har arbejdet med at redesigne en hjemmeside, der oprindeligt havde et dårligt layout og ikke matchede målgruppen. Gennem en analyse af målgruppens behov og præferencer skabte jeg et nyt design, der er både professionelt og brugervenligt. Resultatet er en hjemmeside, der effektivt kommunikerer budskabet og lever op til moderne designstandarder.</div>
+                </div>
+                <div class="projects__item">
+                    <img src="projekter/logo.jpg" alt="Projekt 5" class="projects__image">
+                    <div class="projects__text">I løbet af semesteret har jeg arbejdet intensivt med logo-design, hvor jeg har været omhyggelig med at skabe logos, der er målrettet specifikke målgrupper. Gennem denne proces har jeg opnået en bredere forståelse for, hvordan man designer æstetisk tiltalende logos, der samtidig opfylder både visuelle og funktionelle krav for at appellere til målgruppen.</div>
+                </div>
+                <div class="projects__item">
+                    <img src="projekter/photoshop.png" alt="Projekt 6" class="projects__image">
+                    <div class="projects__text">Jeg har arbejdet med at tage et billede af et produkt i et studie og derefter transformere det i Adobe Photoshop for at skabe en mere visuelt fængende version. Med en bred viden i Photoshop kan jeg blandt andet ændre placeringer, eskalere elementer, tilføje nye grafiske komponenter og meget mere, hvilket har givet mig en solid forståelse for, hvordan man kan forbedre billeder og skabe et professionelt og indbydende visuelt udtryk.</div>
+                </div>
+                <div class="projects__item">
+                    <img src="projekter/plakat.JPG" alt="Projekt 7" class="projects__image">
+                    <div class="projects__text">Jeg har udviklet en evne til at designe plakater, der er målrettet en specifik målgruppe. I et projekt, hvor jeg designede en plakat til en festival, brugte jeg min viden om målgruppen til at skabe et visuelt tiltalende design, der effektivt formidler budskabet. Denne erfaring har givet mig en stærk forståelse for, hvordan man skaber professionelle plakater, der appellerer til brugerne.</div>
+                </div>
+                <div class="projects__item">
+                    <img src="projekter/portraet.jpg" alt="Projekt 8" class="projects__image">
+                    <div class="projects__text">Jeg har udviklet en stærk kompetence i Adobe Lightroom, hvilket giver mig mulighed for at forvandle billeder fra ikke-fængende til visuelt tiltalende på kort tid. I arbejdet med et portræt af en veninde brugte jeg min viden til at justere farver, lys og kontraster, hvilket gjorde billedet langt mere engagerende. Denne erfaring har givet mig en bred forståelse af, hvordan man hurtigt kan tilpasse og forbedre billeder for at skabe et professionelt og fængende resultat.</div>
+                </div>
+                <div class="projects__item">
+                    <img src="projekter/professionel.jpg" alt="Projekt 9" class="projects__image">
+                    <div class="projects__text">Jeg har arbejdet med at tage et billede og derefter redigere det til et professionelt resultat. Gennem små, præcise justeringer har jeg opnået stor viden om, hvordan man kan forbedre et billede, så det fremstår professionelt. Denne erfaring har styrket min forståelse af, hvordan små ændringer kan gøre en stor forskel i billedets kvalitet.</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="end__rectangle"></div>
+
+        <!--kontakt mig delen-->
+        <div id="contacts" class="contact">
+            <div class="contact__header">
+                <h3 class="contact__title">Kontakt mig</h3>
+                <div class="contact__divider"></div>
+            </div>
+
+            <!--kontakt mig tekst-->
+            <p class="contact__description">  Uanset om du har en vision, et forslag eller bare vil sparre om design, er jeg klar til at tage udfordringen op. 
+            Kontakt mig, hvis du har spørgsmål eller forslag!</p>
+
+            <!--kontakt mig muligheder-->
+            <div class="contact__methods">
+                <!--kontakt via telefon-->
+                <div class="contact__method">
+                    <div class="contact__icon-circle">
+                        <span class="material-icons">phone</span>
+                    </div>
+                    <div class="contact__info">
+                        <p>Telefon</p>
+                        <p>+45 22 54 71 81</p>
+                    </div>
+                </div>
+
+                <!--kontakt via mail-->
+                <div class="contact__method">
+                    <div class="contact__icon-circle">
+                        <span class="material-icons">email</span>
+                    </div>
+                    <div class="contact__info">
+                        <p>E-mail</p>
+                        <p>ryagmur01@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--kontakt formular delen-->
+        <div id="kontakt-formular" class="contact__container">
+            <div class="contact__left-rectangle"></div> <!--rektangle på venstre side i kontakt formular delen-->
+            <!--kontakt formular-->
+            <div class="contact__form-container">
+                <div class="contact__form">
+                    <h3 class="contact__form-title">Udfyld formularen</h3>
+                    <form action="process_form.php" method="post">
+                        <label for="name">Navn:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Besked:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <input type="submit" value="Send besked" class="contact__form-btn">
+                    </form>
+                </div>
+                <!--kontakt formular billedet-->
+                <div class="contact__image-container">
+                    <img src="billeder/kontaktmig.png" alt="portræt-af-mig" class="contact__image">
+                </div>
+                <!--rektangle på højre side i kontakt formular delen-->
+                <div class="contact__right-rectangle"></div> 
+            </div>
+        </div>
+    </main> 
+
+    <!--footer delen-->
+    <footer class="footer">
+        <!--footer indhold-->
+        <div class="footer__content">
+            <p class="footer__content-text">Følg mig her</p>
+            <div class="footer__content-line"></div>
+
+            <!--social media ikoner-->
+            <div class="footer__content-social-icons">
+                <!--instagram ikon link-->
+                <div class="footer__content-social-icon">
+                    <a href="https://instagram.com/yagmurrukiye__?igshid=MmVlMjlkMTBhMg%3D%3D&utm_source=qr" target="_blank">
+                        <img src="sociale-ikoner/instagram.png" alt="Instagram" class="footer__content-social-icon-img" width="80" height="80">
+                    </a>
+                </div>
+
+                <!--facebook ikon link-->
+                <div class="footer__content-social-icon">
+                    <a href="https://www.facebook.com/yagmurrukiye01" target="_blank">
+                        <img src="sociale-ikoner/facebook.png" alt="Facebook" class="footer__content-social-icon-img" width="80" height="80">
+                    </a>
+                </div>
+
+                <!--tiktok ikon link-->
+                <div class="footer__content-social-icon">
+                    <a href="https://www.tiktok.com/@yagmurrukiye?_t=8i1Lam86CXY&_r=1" target="_blank">
+                        <img src="sociale-ikoner/tiktok.png" alt="Tiktok" class="footer__content-social-icon-img" width="80" height="80">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--copyright delen-->
+        <div class="footer__copyright">
+            <p class="footer__copyright-text">Copyright ©Website 2024 - Yagmur Rukiye Tulumcu</p>
+        </div>
+    </footer>
+</body>
+</html>
